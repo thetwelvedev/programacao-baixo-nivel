@@ -1,0 +1,8 @@
+# Arquivos executáveis
+*.exe
+
+# Arquivos objeto de compilação
+*.obj
+
+# Arquivos batch do Windows
+*.bat

@@ -1,3 +1,5 @@
+32 bits
+
 Windows
 
 nasm -f win32 hello.asm -o hello.obj
@@ -8,4 +10,17 @@ Linux
 
 nasm -f elf32 hello.asm -o hello.o
 ld -m elf_i386 hello.o -o hello
+./hello
+
+nasm -f elf32 hello.asm -o hello.o
+gcc -m32 hello.o -o hello
+./hello
+
+
+64 bits
+
+Linux
+
+nasm -f elf64 hello.asm -o hello.o
+gcc hello.o -no-pie -o hello
 ./hello

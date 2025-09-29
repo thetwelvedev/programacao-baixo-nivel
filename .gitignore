@@ -1,8 +1,22 @@
 # Arquivos executáveis
 *.exe
 
-# Arquivos objeto de compilação
+# Arquivos objeto de compilação (Windows)
 *.obj
 
 # Arquivos batch do Windows
 *.bat
+
+# Executáveis comuns no Linux
+*.out
+
+# Arquivos executáveis sem extensão (Linux)
+# Ignora qualquer arquivo sem ponto no nome
+* 
+!*/
+!*.*
+!Makefile
+!README*
+
+# Arquivos objeto de compilação (Linux/Unix)
+*.o

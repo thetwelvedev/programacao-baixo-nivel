@@ -1,3 +1,11 @@
+Windows
+
 nasm -f win32 hello.asm -o hello.obj
 gcc hello.obj -o hello.exe
 .\hello.exe
+
+Linux
+
+nasm -f elf32 hello.asm -o hello.o
+ld -m elf_i386 hello.o -o hello
+./hello

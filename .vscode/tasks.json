@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build e Run ASM",
+      "type": "shell",
+      "command": "nasm -f win32 ${file} -o ${fileBasenameNoExtension}.obj && gcc ${fileBasenameNoExtension}.obj -o ${fileBasenameNoExtension}.exe -m32 -lkernel32 && ${fileBasenameNoExtension}.exe",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

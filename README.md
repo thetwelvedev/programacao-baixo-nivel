@@ -7,8 +7,9 @@
 ### Exercícios da matéria de Programação Baixo Nível de 2025.2 de Ciências da Computação
 
 #### Atividades do Sigaa
-- [x] Atividade 1 - Leitura e apresentação de um artigo de baixo nível  
-- [x] Lista de Exercícios I - Programação em Baixo Nível
+- [x] 15/09 - Atividade 1 - Leitura e apresentação de um artigo de baixo nível  
+- [x] 01/10 - Lista de Exercícios I
+- [x] 08/10 - Lista de Exercícios II
 
 ### Ferramentas e linguagens utilizadas:
 <div>

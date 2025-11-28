@@ -1,22 +1,17 @@
-bits 64
-default rel
+section .data
+    msg db "Hello, world!", 10
+    len equ $ - msg
 
-segment .data
-    msg db "Hello world!", 0xA, 0   ; \n no lugar de 0xd 0xa
+section .text
+    global _start
 
-segment .text
-global main
-extern printf
+_start:
+    mov eax, 4        ; sys_write
+    mov ebx, 1        ; stdout
+    mov ecx, msg
+    mov edx, len
+    int 0x80
 
-main:
-    push    rbp
-    mov     rbp, rsp
-    sub     rsp, 32
-
-    lea     rdi, [rel msg]  ; Linux x86_64 usa RDI para o 1º argumento
-    xor     eax, eax        ; printf é variadic, limpar RAX
-    call    printf
-
-    mov     eax, 0          ; valor de retorno do main = 0
-    leave
-    ret
+    mov eax, 1        ; sys_exit
+    xor ebx, ebx
+    int 0x80
